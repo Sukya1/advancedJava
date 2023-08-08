@@ -22,7 +22,7 @@ public class UserDataValidator {
                     if (age <= 0) {
                         throw new IllegalArgumentException("Invalid Age");
                     }
-                    validWriter.write(info);
+                    validWriter.write(name + "," +  email + "," + age);
                     validWriter.newLine();
                 } catch (Exception e){
                 errorWriter.write(info + "" + e);
@@ -33,7 +33,7 @@ public class UserDataValidator {
             errorWriter.close();
             validWriter.close();
         } catch(Exception e) {
-            System.out.println(e);
+            System.out.println("error");
         }
     }
 }
